@@ -15,7 +15,7 @@ export default function References() {
         </div>
         <div className="mt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-slate-500">
           <p>MCO 1 Academic Website | Built for Gender and Society Course</p>
-          <p className="mt-2 md:mt-0">Inspired by LGBT Foundation Design System</p>
+          <p className="mt-2 md:mt-0">Databae's MCO 1</p>
         </div>
       </div>
     </footer>

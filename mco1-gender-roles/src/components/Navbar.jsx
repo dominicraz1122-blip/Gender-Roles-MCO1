@@ -11,7 +11,7 @@ export default function Navbar({ sections, activeTab, scrollToSection }) {
           <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollToSection('home')}>
             <div className="flex flex-col">
               <span className="font-extrabold text-2xl tracking-tighter text-slate-900 font-serif">
-                GENDER<span className="text-pink-600">.</span>PH
+                DataBae's<span className="text-pink-600">.</span>MCO1
               </span>
               <span className="text-[10px] tracking-widest text-slate-500 uppercase font-bold -mt-1">
                 MCO 1 Academic Portal
