@@ -1,0 +1,340 @@
+@import "tailwindcss";
+
+/* =========================================================
+   GENDER.PH — GLOBAL DESIGN SYSTEM
+   Phase 12: Final UI / UX Polish
+   ========================================================= */
+
+:root {
+  /* ---------- Core palette ---------- */
+
+  --color-ink: #17202a;
+  --color-ink-soft: #334155;
+  --color-muted: #64748b;
+  --color-paper: #f8f7f3;
+  --color-white: #ffffff;
+  --color-surface: #f1f3f2;
+  --color-border: #d9dedb;
+  --color-border-strong: #b9c2be;
+
+  /* ---------- Accent palette ---------- */
+
+  --color-pink: #c2185b;
+  --color-pink-dark: #9d174d;
+  --color-pink-soft: #fce7ef;
+
+  --color-gold: #c69214;
+  --color-gold-soft: #f8efd2;
+
+  --color-green: #356859;
+  --color-green-soft: #e5eee9;
+
+  --color-blue: #315b72;
+  --color-blue-soft: #e6eef2;
+
+  --color-red: #a94442;
+  --color-red-soft: #f5e5e4;
+
+  /* ---------- Typography ---------- */
+
+  --font-display:
+    "Arial Black",
+    "Arial",
+    "Helvetica Neue",
+    sans-serif;
+
+  --font-body:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Helvetica Neue",
+    sans-serif;
+
+  --font-editorial:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  /* ---------- Layout ---------- */
+
+  --content-width: 1280px;
+  --reading-width: 760px;
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* ---------- Effects ---------- */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-sm:
+    0 1px 3px rgba(15, 23, 42, 0.08);
+
+  --shadow-md:
+    0 8px 24px rgba(15, 23, 42, 0.1);
+
+  --shadow-lg:
+    0 18px 45px rgba(15, 23, 42, 0.14);
+
+  --transition-fast: 180ms ease;
+  --transition-normal: 280ms ease;
+}
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+
+  margin: 0;
+
+  background: var(--color-paper);
+  color: var(--color-ink);
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   MEDIA SAFETY
+   ========================================================= */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   TYPOGRAPHY FOUNDATION
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+
+  color: var(--color-ink);
+
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  color: var(--color-white);
+  background: var(--color-pink);
+}
+
+/* =========================================================
+   SECTION SCROLL POSITION
+   Prevents the fixed/sticky navigation from covering
+   section headings when navigating.
+   ========================================================= */
+
+section[id],
+footer[id] {
+  scroll-margin-top: 80px;
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* =========================================================
+   SHARED DESIGN CLASSES
+   ========================================================= */
+
+.editorial-text {
+  font-family: var(--font-editorial);
+}
+
+.display-text {
+  font-family: var(--font-display);
+  font-weight: 900;
+}
+
+.reading-text {
+  max-width: var(--reading-width);
+}
+
+.section-shell {
+  width: min(100% - 2rem, var(--content-width));
+  margin-inline: auto;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-label::before {
+  content: "";
+
+  width: 24px;
+  height: 2px;
+
+  background: currentColor;
+}
+
+.editorial-rule {
+  width: 100%;
+  height: 1px;
+
+  background: var(--color-border);
+}
+
+/* =========================================================
+   MOBILE TEXT / LAYOUT SAFETY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button {
+  overflow-wrap: break-word;
+}
+
+/* =========================================================
+   TABLET / DESKTOP
+   ========================================================= */
+
+@media (min-width: 640px) {
+  .section-shell {
+    width: min(100% - 3rem, var(--content-width));
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    width: min(100% - 5rem, var(--content-width));
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-padding-top: 92px;
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: 92px;
+}
+
