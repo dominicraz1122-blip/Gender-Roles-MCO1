@@ -1,28 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-// Import your 10 custom photos from the assets folder
 import slide1 from "../assets/P1.jpg";
 import slide2 from "../assets/P2.jpg";
 import slide3 from "../assets/P3.jpg";
 import slide4 from "../assets/P4.jpg";
-import slide5 from "../assets/P5.jpg";
-import slide6 from "../assets/P6.jpg";
-import slide7 from "../assets/P7.jpg";
-import slide8 from "../assets/P8.jpg";
-import slide9 from "../assets/P9.jpg";
-import slide10 from "../assets/P10.jpg";
 
 const heroImages = [
   slide1,
   slide2,
   slide3,
   slide4,
-  slide5,
-  slide6,
-  slide7,
-  slide8,
-  slide9,
-  slide10,
 ];
 
 export default function Hero({ scrollToSection }) {
