@@ -257,7 +257,6 @@ export default function Multimedia() {
                           rel="noopener noreferrer"
                           className="text-xs font-mono font-bold tracking-wider text-purple-600 hover:text-purple-800 flex items-center gap-1 transition-colors"
                         >
-                          VIEW SOURCE ({activeItem.label}) <ExternalLink size={12} />
                         </a>
                       </>
                     )}
