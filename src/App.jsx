@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import ChatWidget from './components/ChatWidget';
 
 import Hero from './sections/Hero';
 import Understanding from './sections/Understanding';
@@ -60,8 +59,6 @@ function Website() {
 
   return (
     <div className="app-shell relative pb-20">
-      <ChatWidget />
-
       <Navbar sections={sections} />
 
       <main>
