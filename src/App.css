@@ -2472,3 +2472,71 @@ p, h1, h2, h3, h4, span {
 section, div {
   max-width: 100%;
 }
+/* GLOBAL MOBILE PHONE SCREEN FIXES */
+@media (max-width: 768px) {
+  /* 1. Shrink all big headings and text so they fit perfectly on phones */
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  h3 { font-size: 1.25rem !important; }
+  p, span, a, li { font-size: 0.85rem !important; }
+
+  /* 2. Prevent any horizontal scrolling or overflow */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 3. Disable hover-only animations on touch phones (like hidden text that requires hover) */
+  .conclusion-text, .group-hover\:opacity-100 {
+    opacity: 1 !important;
+    max-height: none !important;
+    transform: none !important;
+  }
+}
+/* MOBILE SPECIAL EFFECTS & STYLING */
+@media (max-width: 768px) {
+  
+  /* 1. Subtle glowing glass effect for cards so they stand out */
+  .multimedia-card, .conclusion-main, article, section > div {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  /* 2. Smooth fade-in animation when scrolling down the page */
+  section {
+    animation: mobileFadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes mobileFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 3. Give interactive buttons a satisfying "active/tap" press effect */
+  button:active, a:active {
+    transform: scale(0.96);
+    transition: transform 0.1s ease;
+  }
+
+  /* 4. Stylish gradient accent lines on mobile headers */
+  h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #ec4899, #8b5cf6);
+    margin-top: 8px;
+    border-radius: 2px;
+  }
+}
