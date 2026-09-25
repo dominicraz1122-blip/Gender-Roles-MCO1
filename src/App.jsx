@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import EmergencyButton from './components/EmergencyButton';
 import ChatWidget from './components/ChatWidget';
 
 import Hero from './sections/Hero';
@@ -61,7 +60,6 @@ function Website() {
 
   return (
     <div className="app-shell relative pb-20">
-      <EmergencyButton />
       <ChatWidget />
 
       <Navbar sections={sections} />
