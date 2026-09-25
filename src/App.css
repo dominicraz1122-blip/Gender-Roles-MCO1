@@ -2428,3 +2428,47 @@ img, video, iframe {
   max-width: 100%;
   overflow-x: auto;
 }
+/* Prevent giant headings from breaking vertically or overflowing on mobile */
+@media (max-width: 768px) {
+  h1, h2, .section-title, .multimedia-title {
+    writing-mode: horizontal-tb !important;
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+/* Global container padding adjustments for mobile phones */
+.section-container, section {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+/* GLOBAL MOBILE VIEWPORT FIXES */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Ensure images, videos, and media blocks scale down automatically on phones */
+img, video, iframe, canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent long text strings or titles from stretching screen boundaries on mobile */
+p, h1, h2, h3, h4, span {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Make wrapper sections fluid and prevent horizontal shifting */
+section, div {
+  max-width: 100%;
+}
