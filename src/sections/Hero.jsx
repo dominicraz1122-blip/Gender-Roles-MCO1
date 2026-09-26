@@ -25,7 +25,10 @@ export default function Hero({ scrollToSection }) {
   }, []);
 
   return (
-    <section id="home" className="hero-exhibition relative overflow-hidden">
+    <section 
+      id="home" 
+      className="hero-exhibition relative w-full h-screen overflow-hidden flex flex-col justify-end m-0 p-0"
+    >
       {/* Background image slideshow */}
       {heroImages.map((img, index) => (
         <div
@@ -62,8 +65,11 @@ export default function Hero({ scrollToSection }) {
         </span>
       </div>
 
-      {/* Main content with liquid glass text effect */}
-      <div className="hero-exhibition__container relative z-10">
+      {/* Main content container */}
+      <div 
+        className="hero-exhibition__container relative z-10"
+        style={{ marginTop: 'auto', paddingTop: '6rem', paddingBottom: '2.5rem' }}
+      >
         <div 
           className="hero-exhibition__content text-white"
           style={{ 
@@ -82,22 +88,22 @@ export default function Hero({ scrollToSection }) {
               backdropFilter: 'blur(4px)',
             }}
           >
-            MCO 1 · GROUP 01
+            MCO 1 · GROUP 02
           </div>
 
           <h1 
             className="hero-exhibition__title font-black uppercase"
             style={{
-              color: 'rgba(201, 189, 189, 0.9)', // Semi-transparent glass look
+              color: 'rgba(201, 189, 189, 0.9)', 
               textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
               backdropFilter: 'blur(4px)',
             }}
           >
-            HELLO, WE'RE GROUP 01:
+            HELLO, WE'RE GROUP 02:
             <br />
             <span 
               style={{
-                color: 'rgba(212, 20, 90, 0.75)', // Translucent liquid pink accent
+                color: 'rgba(212, 20, 90, 0.75)', 
                 textShadow: '0 0 20px rgba(212, 20, 90, 0.5)'
               }}
             >
