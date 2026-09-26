@@ -19,7 +19,7 @@ export default function Hero({ scrollToSection }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 10000); // Changes image every 10 seconds
+    }, 2000); 
 
     return () => clearInterval(interval);
   }, []);
