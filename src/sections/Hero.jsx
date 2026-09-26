@@ -74,14 +74,21 @@ export default function Hero({ scrollToSection }) {
             padding: 0
           }}
         >
-          <div className="hero-exhibition__eyebrow text-white/80">
+          <div 
+            className="hero-exhibition__eyebrow"
+            style={{
+              color: 'rgba(201, 189, 189, 0.9)',
+              textShadow: '0 4px 16px rgba(0, 0, 0, 0.5)',
+              backdropFilter: 'blur(4px)',
+            }}
+          >
             MCO 1 · GROUP 01
           </div>
 
           <h1 
             className="hero-exhibition__title font-black uppercase"
             style={{
-              color: 'rgba(255, 255, 255, 0.2)', // Semi-transparent glass look
+              color: 'rgba(201, 189, 189, 0.9)', // Semi-transparent glass look
               textShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
               backdropFilter: 'blur(4px)',
             }}
@@ -98,7 +105,14 @@ export default function Hero({ scrollToSection }) {
             </span>
           </h1>
 
-          <p className="hero-exhibition__description text-white/90 drop-shadow-md">
+          <p 
+            className="hero-exhibition__description"
+            style={{
+              color: 'rgba(201, 189, 189, 0.9)',
+              textShadow: '0 4px 16px rgba(0, 0, 0, 0.5)',
+              backdropFilter: 'blur(4px)',
+            }}
+          >
             We present a critical exploration and creative analysis of historical and contemporary gender roles in the Philippines for Major Course Output 1.
           </p>
 
